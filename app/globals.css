@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+body {
+  @apply bg-ink text-mist font-body antialiased;
+  background-image:
+    radial-gradient(60rem 40rem at 85% -10%, rgba(239, 62, 74, 0.10), transparent 60%),
+    radial-gradient(50rem 35rem at -10% 20%, rgba(79, 209, 224, 0.08), transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Rounded "Dex panel" surface used everywhere */
+.panel {
+  @apply bg-panel border border-edge rounded-card;
+}
+
+/* Visible keyboard focus */
+:focus-visible {
+  outline: 2px solid #4fd1e0;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* The signature "Dex lens": a Pokédex camera light that pulses */
+.dex-lens {
+  @apply relative rounded-full;
+  background:
+    radial-gradient(circle at 32% 30%, #bdf3fb 0 12%, #4fd1e0 32%, #1a7f97 75%, #0d4b5c 100%);
+  border: 3px solid #eef7ff;
+  box-shadow: 0 0 0 4px #ef3e4a, 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

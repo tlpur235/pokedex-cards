@@ -1,0 +1,62 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glowR" cx="0.9" cy="0.05" r="0.8">
+      <stop offset="0%" stop-color="#EF3E4A" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#EF3E4A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.05" cy="0.9" r="0.8">
+      <stop offset="0%" stop-color="#4FD1E0" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#4FD1E0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lens" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0%" stop-color="#8FE7F2"/>
+      <stop offset="55%" stop-color="#2FA7BE"/>
+      <stop offset="100%" stop-color="#0D4B5C"/>
+    </radialGradient>
+    <linearGradient id="cardFace" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1B2342"/>
+      <stop offset="100%" stop-color="#12182E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0B1020"/>
+  <rect width="1200" height="630" fill="url(#glowR)"/>
+  <rect width="1200" height="630" fill="url(#glowB)"/>
+
+  <!-- Left: identity -->
+  <g>
+    <circle cx="180" cy="200" r="86" fill="#EF3E4A"/>
+    <circle cx="180" cy="200" r="56" fill="#EEF7FF"/>
+    <circle cx="180" cy="200" r="45" fill="url(#lens)"/>
+    <circle cx="163" cy="181" r="14" fill="#BDF3FB" opacity="0.9"/>
+
+    <text x="300" y="185" font-family="Chakra Petch" font-weight="700" font-size="76" fill="#EDF0FA">Pokédex</text>
+    <text x="300" y="262" font-family="Chakra Petch" font-weight="700" font-size="76" fill="#EF3E4A">Cards</text>
+    <text x="96" y="368" font-family="Chakra Petch" font-weight="500" font-size="34" fill="#8B94B8">Your Pokédex for Pokémon cards.</text>
+
+    <rect x="96" y="420" rx="34" width="330" height="68" fill="#EF3E4A"/>
+    <text x="261" y="465" text-anchor="middle" font-family="Chakra Petch" font-weight="700" font-size="30" fill="#FFFFFF">SCAN A CARD</text>
+    <text x="96" y="552" font-family="Chakra Petch" font-weight="500" font-size="24" fill="#4FD1E0">Scan it · Identify it · Learn everything</text>
+  </g>
+
+  <!-- Right: card in scan frame -->
+  <g transform="translate(790,90) rotate(6)">
+    <rect x="0" y="0" width="300" height="418" rx="22" fill="url(#cardFace)" stroke="#242D4C" stroke-width="3"/>
+    <rect x="22" y="22" width="256" height="180" rx="14" fill="#0B1020" stroke="#242D4C" stroke-width="2"/>
+    <circle cx="150" cy="112" r="52" fill="#FFCB3E"/>
+    <path d="M160 74 L128 122 L148 122 L138 154 L174 104 L152 104 Z" fill="#0B1020"/>
+    <rect x="22" y="222" width="160" height="18" rx="9" fill="#242D4C"/>
+    <rect x="22" y="252" width="256" height="12" rx="6" fill="#1B2342"/>
+    <rect x="22" y="274" width="256" height="12" rx="6" fill="#1B2342"/>
+    <rect x="22" y="296" width="200" height="12" rx="6" fill="#1B2342"/>
+    <rect x="22" y="340" width="110" height="30" rx="15" fill="#F7D02C"/>
+  </g>
+  <!-- Scan frame corners -->
+  <g stroke="#4FD1E0" stroke-width="7" fill="none" stroke-linecap="round">
+    <path d="M760 90 v-32 h32"/>
+    <path d="M1148 66 h32 v32"/>
+    <path d="M736 540 v32 h32"/>
+    <path d="M1160 566 v32 h-32"/>
+  </g>
+  <line x1="740" y1="330" x2="1176" y2="330" stroke="#4FD1E0" stroke-width="5" opacity="0.85"/>
+</svg>
